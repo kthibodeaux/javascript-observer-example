@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="test.js"></script>
+  </head>
+  <body>
+    <h1 id="a" data-count="1" class="watch">Test without jQuery</h1>
+    <button onclick="incrementDataCount('#a'); setSpanValue('#a-value', '#a')">Up</button>
+    <button onclick="decrementDataCount('#a'); setSpanValue('#a-value', '#a')">Down</button>
+    <span id="a-value">1</span>
+
+    <h1 id="b" data-count="1" class="watch">Test with jQuery</h1>
+    <button onclick="jIncrementDataCount('#b'); setSpanValue('#b-value', '#b')">Up</button>
+    <button onclick="jDecrementDataCount('#b'); setSpanValue('#b-value', '#b')">Down</button>
+    <span id="b-value">1</span>
+
+    <h1 id="c" data-count="1">No Observer</h1>
+    <button onclick="incrementDataCount('#c'); setSpanValue('#c-value', '#c')">Up</button>
+    <button onclick="decrementDataCount('#c'); setSpanValue('#c-value', '#c')">Down</button>
+    <span id="c-value">1</span>
+  </body>
+</html>
